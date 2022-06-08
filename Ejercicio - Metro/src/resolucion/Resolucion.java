@@ -12,6 +12,7 @@ public class Resolucion {
 	
 	public void leer() {
 		this.ciudad = archivo.leerArchivo();
+		this.ciudad.mostrarConexiones();
 	}
 	
 	public void escribir() {
@@ -20,9 +21,5 @@ public class Resolucion {
 	
 	public void resolver() {
 		this.ciudad.calcularPuentesMinimos();
-	}
-	
-	public int getCostoMinimo() {
-		return this.ciudad.getCosoMinimo();
 	}
 }

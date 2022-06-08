@@ -52,7 +52,8 @@ public class Ciudad {
 				if(visitadas[i]) {
 					for (int j = 0; j < grafoDeIslas.getNodos(); j++) {
 						if(!visitadas[j] && grafoDeIslas.getArista(i, j) != -1) {
-							minimo = grafoDeIslas.getArista(i, j) < minimo ? grafoDeIslas.getArista(i, j) : minimo;
+							int valor = grafoDeIslas.getArista(i, j);
+							minimo = valor < minimo ? valor : minimo;
 							fila = i;
 							columna = j;
 						}
@@ -65,6 +66,7 @@ public class Ciudad {
 			}
 			
 			visitadas[columna] = true;
+			recorridas++;
 		}
 	}
 	
@@ -72,4 +74,7 @@ public class Ciudad {
 		return this.costoMinimo;
 	}
 	
+	public void mostrarConexiones() {
+		this.grafoDeIslas.mostrarMatriz();
+	}
 }

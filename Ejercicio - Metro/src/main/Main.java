@@ -7,8 +7,6 @@ public class Main {
 		Resolucion resolucion = new Resolucion();
 		resolucion.leer();
 		resolucion.resolver();
-		resolucion.escribir();
-		
-		System.out.println(resolucion.getCostoMinimo());
+//		resolucion.escribir();
 	}
 }

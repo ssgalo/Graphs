@@ -1,5 +1,7 @@
 package grafo;
 
+import java.util.Arrays;
+
 public class MatrizGrafo extends Grafo{
 	
 	protected int[][] grafo;
@@ -11,6 +13,12 @@ public class MatrizGrafo extends Grafo{
 			for (int j = 0; j < grafo.length; j++) {
 				grafo[i][j] = -1;
 			}
+		}
+	}
+	
+	public void mostrarMatriz() {
+		for (int i = 0; i < grafo.length; i++) {
+			System.out.println(Arrays.toString(grafo[i]));
 		}
 	}
 	

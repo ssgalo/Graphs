@@ -34,6 +34,7 @@ public class Archivo {
 			for (int i = 0; i < puentes; i++) {
 				ciudad.agregarPuente(sc.nextInt() - 1, sc.nextInt() - 1);
 			}	
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
