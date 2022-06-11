@@ -13,12 +13,12 @@ public class MatrizGrafoD extends Grafo {
 	}
 
 	@Override
-	public int getArista(int desde, int hasta) {
+	public Integer getArista(int desde, int hasta) {
 		return this.matriz[desde][hasta];
 	}
 
 	@Override
 	public void setArista(int desde, int hasta, int costo) {
-		this.matriz[desde][hasta] = costo;
+		this.matriz[desde - 1][hasta - 1] = costo;
 	}
 }

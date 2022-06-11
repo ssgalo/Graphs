@@ -1,30 +1,21 @@
 package grafo;
 
 public class Nodo implements Comparable<Nodo> {
-	private int id;
-	private double peso;
+	public int id;
+	public double costo;
 
-	public Nodo(int id, double costo) {
+	public Nodo(int id, int costo) {
 		this.id = id;
-		this.peso = costo;
+		this.costo = costo;
 	}
 
 	@Override
 	public String toString() {
-		return "(" + id + "," + peso + ")";
+		return "(" + id + "," + costo + ")";
 	}
 
 	@Override
 	public int compareTo(Nodo o) {
 		return this.id - o.id;
 	}
-
-	public double getPeso() {
-		return this.peso;
-	}
-
-	public int getId() {
-		return this.id;
-	}
-
 }

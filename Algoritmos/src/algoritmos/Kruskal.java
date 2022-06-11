@@ -92,27 +92,4 @@ public class Kruskal {
 	public int getCosto() {
 		return this.costo;
 	}
-	
-	public static void main(String[] args) {
-		MatrizGrafoND grafo = new MatrizGrafoND(6);
-		
-		grafo.setArista(1, 2, 7);
-		grafo.setArista(1, 3, 3);
-		grafo.setArista(2, 4, 6);
-		grafo.setArista(2, 3, 1);
-		grafo.setArista(4, 3, 3);
-		grafo.setArista(3, 5, 8);
-		grafo.setArista(5, 6, 8);
-		grafo.setArista(4, 6, 2);
-		grafo.setArista(5, 4, 2);
-		
-		Kruskal kruskal = new Kruskal(grafo);
-		
-		kruskal.resolver();
-		
-		int costo = kruskal.getCosto();
-		System.out.println(costo);
-		
-		kruskal.mostrarMST();
-	}
 }

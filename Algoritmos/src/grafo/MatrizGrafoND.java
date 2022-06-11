@@ -19,7 +19,7 @@ public class MatrizGrafoND extends Grafo {
 	}
 	
 	@Override
-	public int getArista(int desde, int hasta) {
+	public Integer getArista(int desde, int hasta) {
 		return this.matriz[desde][hasta];
 	}
 
