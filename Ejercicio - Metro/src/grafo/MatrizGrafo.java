@@ -24,7 +24,8 @@ public class MatrizGrafo extends Grafo{
 	
 	@Override
 	public void setArista(int desde, int hasta, int costo) {
-		grafo[desde][hasta] = costo;
+		this.grafo[desde][hasta] = costo;
+		this.grafo[hasta][desde] = costo;
 	}
 
 	@Override

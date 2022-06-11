@@ -24,12 +24,10 @@ public class Ciudad {
 	
 	public void agregarTunel(int desde, int hasta) {
 		grafoDeIslas.setArista(desde, hasta, 0);
-		grafoDeIslas.setArista(hasta, desde, 0);
 	}
 	
 	public void agregarPuente(int desde, int hasta) {
 		grafoDeIslas.setArista(desde, hasta, 1);
-		grafoDeIslas.setArista(hasta, desde, 1);
 	}
 	
 	public void calcularPuentesMinimos() {
