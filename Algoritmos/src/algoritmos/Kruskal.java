@@ -5,32 +5,10 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.PriorityQueue;
 
+import grafo.Arista;
 import grafo.MatrizGrafoND;
 
 public class Kruskal {
-
-	private class Arista implements Comparable<Arista>{
-
-		private int desde;
-		private int hasta;
-		private int costo;
-		
-		public Arista(int desde, int hasta, int costo) {
-			this.desde = desde;
-			this.hasta = hasta;
-			this.costo = costo;
-		}
-		
-		@Override
-		public int compareTo(Arista o) {
-			return this.costo - o.costo;
-		}
-
-		@Override
-		public String toString() {
-			return "[" + (desde + 1) + ", " + (hasta + 1) + "]";
-		}
-	}
 	
 	private MatrizGrafoND grafo;
 	private int[] parent;

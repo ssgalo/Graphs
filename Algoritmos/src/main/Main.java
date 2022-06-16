@@ -36,7 +36,8 @@ public class Main {
 		
 		Dijkstra dijsktra = new Dijkstra(grafo);
 		
-		int[] distancias = dijsktra.resolverDijsktra(0);
+		int[] distancias = dijsktra.resolverDijsktra(1);
 		System.out.println(Arrays.toString(distancias));
+		System.out.println(dijsktra.getCamino(5));
 	}
 }

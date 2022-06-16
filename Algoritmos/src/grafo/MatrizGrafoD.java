@@ -1,10 +1,16 @@
 package grafo;
 
+import java.util.Arrays;
+
 public class MatrizGrafoD extends Grafo {
 	private int[][] matriz;
-
+	public final int INFINITO = 3000;
+	
 	public MatrizGrafoD(int size) {
 		this.matriz = new int[size][size];
+		for (int i = 0; i < size; i++) {
+			Arrays.fill(this.matriz[i], INFINITO);
+		}
 	}
 
 	@Override

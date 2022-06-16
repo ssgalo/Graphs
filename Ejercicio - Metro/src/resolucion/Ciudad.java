@@ -58,11 +58,9 @@ public class Ciudad {
 					}
 				}	
 			}
-			
-			if(minimo != INFINITO) {
-				this.costoMinimo += minimo;				
-			}
-			
+				
+			this.costoMinimo += minimo;				
+		
 			visitadas[columna] = true;
 			recorridas++;
 		}
