@@ -13,6 +13,12 @@ public class MatrizGrafoD extends Grafo {
 		}
 	}
 
+	public void mostrarMatriz() {
+		for (int i = 0; i < matriz.length; i++) {
+			System.out.println(Arrays.toString(matriz[i]));
+		}
+	}
+	
 	@Override
 	public int getNodos() {
 		return this.matriz.length;

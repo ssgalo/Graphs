@@ -49,9 +49,9 @@ public class Ciudad {
 				
 				if(visitadas[i]) {
 					for (int j = 0; j < grafoDeIslas.getNodos(); j++) {
-						if(!visitadas[j] && grafoDeIslas.getArista(i, j) != -1) {
-							int valor = grafoDeIslas.getArista(i, j);
-							minimo = valor < minimo ? valor : minimo;
+						int valor = grafoDeIslas.getArista(i, j);
+						if(!visitadas[j] && valor != -1 && valor < minimo) {
+							minimo = valor;
 							fila = i;
 							columna = j;
 						}

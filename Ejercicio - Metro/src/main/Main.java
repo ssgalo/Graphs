@@ -7,6 +7,6 @@ public class Main {
 		Resolucion resolucion = new Resolucion();
 		resolucion.leer();
 		resolucion.resolver();
-//		resolucion.escribir();
+		resolucion.escribir();
 	}
 }

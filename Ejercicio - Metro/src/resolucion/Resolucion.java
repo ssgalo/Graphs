@@ -12,7 +12,6 @@ public class Resolucion {
 	
 	public void leer() {
 		this.ciudad = archivo.leerArchivo();
-		this.ciudad.mostrarConexiones();
 	}
 	
 	public void escribir() {
