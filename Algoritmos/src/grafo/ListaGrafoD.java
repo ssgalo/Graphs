@@ -1,48 +1,44 @@
 package grafo;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ListaGrafoD extends Grafo{
-	
-	private List<Nodo>[] grafo;
+public class ListaGrafoD extends Grafo {
+	private int cantNodos;
+	private ArrayList<LinkedList<Nodo>> grafo;
 
-	@SuppressWarnings("unchecked")
 	public ListaGrafoD(int size) {
-		grafo = new List[size];
-		
+		this.cantNodos = size;
+		grafo = new ArrayList<LinkedList<Nodo>>(size);
+
 		for (int i = 0; i < size; i++) {
-			grafo[i] = new LinkedList<Nodo>();
+			this.grafo.add(new LinkedList<Nodo>());
 		}
 	}
-	
+
 	@Override
 	public void setArista(int desde, int hasta, int costo) {
 		
-		for (Nodo nodo : grafo[desde]) {
-			if(nodo.id == hasta) {
-				nodo.costo = costo;
-				return;
-			}
-		}
+		Nodo nodo = new Nodo(hasta - 1, costo);
 		
-		grafo[desde].add(new Nodo(hasta, costo));
+		this.grafo.get(desde - 1).add(nodo);
 		
 	}
 
 	@Override
 	public int getNodos() {
-		return grafo.length;
+		return cantNodos;
 	}
 
 	@Override
 	public Integer getArista(int desde, int hasta) {
-		for(Nodo actual : grafo[desde]) {
-			if(actual.id == hasta) {
-				return actual.id;
+		for (Nodo actual : grafo.get(desde)) {
+			if (actual.getID() == hasta) {
+				return actual.getID();
 			}
 		}
-		
+
 		return null;
 	}
 

@@ -43,13 +43,13 @@ public class Dijkstra {
 		while (cantVisitados < grafo.getNodos()) {
 
 			Nodo actual = pq.remove();
-			visitados[actual.id] = true;
+			visitados[actual.getID()] = true;
 
 			for (int i = 0; i < grafo.getNodos(); i++) {
-				int valor = grafo.getArista(actual.id, i);
-				if (valor != grafo.INFINITO && !visitados[i] && distancias[i] > valor + distancias[actual.id]) {
-					distancias[i] = valor + distancias[actual.id];
-					this.predecesores[i] = actual.id;
+				int valor = grafo.getArista(actual.getID(), i);
+				if (valor != grafo.INFINITO && !visitados[i] && distancias[i] > valor + distancias[actual.getID()]) {
+					distancias[i] = valor + distancias[actual.getID()];
+					this.predecesores[i] = actual.getID();
 					pq.add(new Nodo(i, distancias[i]));
 				}
 			}
